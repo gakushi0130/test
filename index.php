@@ -6,9 +6,8 @@
  * Time: 1:58
  *
  */
-echo phpinfo();
 
-
+echo "test1";
 
 $dbhost = 'testdb.ct8kfjivc4hn.ap-northeast-1.rds.amazonaws.com';
 $username = 'dbuser';
@@ -18,7 +17,7 @@ $dbname = 'testdb';
 $link = mysql_connect($dbhost, $username, $password, $dbname);
 mysql_select_db($dbname);
 
-$result = mysql_query("SELECT * FROM mytable");
+$result = mysql_query("SELECT * FROM test");
 
 while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
     printf ("ID: %s  Name: %s", $row["test_id"], $row["test_name"]);
