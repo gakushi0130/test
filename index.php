@@ -1,9 +1,11 @@
 <?php
 
-echo "test4";
+echo "test5";
 
 $m = new Memcached();
+$m->setOption(Memcached::OPT_CLIENT_MODE, Memcached::DYNAMIC_CLIENT_MODE);
 $m->addServer('test-gakushi.32ftn4.cfg.apne1.cache.amazonaws.com', 11211);
+
 
 $m->set('int', 99);
 $m->set('string', 'a simple string');
