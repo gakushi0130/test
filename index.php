@@ -38,13 +38,16 @@ $var = $dynamic_client->get('key');
 var_dump($var);
 
 
+echo "hoge";
+
+
 /**
  * Configuring the client with Static client mode disables the usage of Auto Discovery
  * and the client operates as it did before the introduction of Auto Discovery. The user
  * can then add a list of server endpoints.
  */
 
-$static_client = new Memcached();
-$static_client->setOption(Memcached::OPT_CLIENT_MODE, Memcached::STATIC_CLIENT_MODE);
-$static_client->addServer($server_endpoint, $server_port);
-$static_client->set('key', 'value');  // Store the data in the cluster without expiration
+//$static_client = new Memcached();
+//$static_client->setOption(Memcached::OPT_CLIENT_MODE, Memcached::STATIC_CLIENT_MODE);
+//$static_client->addServer($server_endpoint, $server_port);
+//$static_client->set('key', 'value');  // Store the data in the cluster without expiration
